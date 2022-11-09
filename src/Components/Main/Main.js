@@ -5,6 +5,9 @@ import Activity from '../Activity/Activity';
 const Main = () => {
     return (
         <div>
+
+            {/* ---------------Navbar starts here -----------------*/}
+
             <nav className="navbar navbar-expand-lg navbar-light navbar-dark bg-primary">
                 <div className="container-fluid text-white">
                     <a className="navbar-brand fs-4 m-3" href="/#">Super Productive</a>
@@ -23,7 +26,7 @@ const Main = () => {
                     </div>
                 </div>
             </nav>
-            <h1>Hello from main</h1>
+            {/* ---------------Navbar ends here -----------------*/}
             <Activity></Activity>
         </div>
     );
