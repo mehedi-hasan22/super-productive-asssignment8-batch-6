@@ -1,15 +1,20 @@
 import React from 'react';
+import './Activity.css'
 
-const Activity = () => {
+const Activity = (props) => {
+    const { name, description, time, img } = props.activity
     return (
-        <div class="mx-5 mt-5">
-            <div class="row">
-                <div class="col-sm-12 col-lg-9 bg-primary">
-                    <p>activities</p>
+        <div className='activity'>
+            <div className="card mt-3" style={{ width: "18rem", minHeight: "20rem" }}>
+                <img src={img} style={{ minHeight: "10em", maxHeight: "10em" }} className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">{name}</h5>
+                    <p className="card-text">{description}</p>
+                    <p>Required time: {time}min</p>
+                    <a href="/#" className="btn btn-primary card-btn">Add to list</a>
                 </div>
-                <div class="col-sm-12 col-lg-3 bg-secondary"><p>Details</p></div>
             </div>
-        </div>
+        </div >
     );
 };
 

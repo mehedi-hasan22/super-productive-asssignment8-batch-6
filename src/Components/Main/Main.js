@@ -1,8 +1,18 @@
-import React from 'react';
-import './Main.css'
+import React, { useEffect, useState } from 'react';
 import Activity from '../Activity/Activity';
+import './Main.css'
+// import Activity from '../Activity/Activity';
 
 const Main = () => {
+
+    const [activities, setActivity] = useState([])
+
+    useEffect(() => {
+        fetch('activity.json')
+            .then(res => res.json())
+            .then(data => setActivity(data))
+    }, [])
+
     return (
         <div>
 
@@ -27,7 +37,25 @@ const Main = () => {
                 </div>
             </nav>
             {/* ---------------Navbar ends here -----------------*/}
-            <Activity></Activity>
+
+
+
+
+            <div className="mx-5 mt-5">
+                <div className="row">
+                    <div className="col-sm-12 col-lg-9 bg-light rounded-3 ms-auto">
+                        <div className="activity-container">
+                            {
+                                activities.map(activity => <Activity
+                                    key={activity.id}
+                                    activity={activity}
+                                ></Activity>)
+                            }
+                        </div>
+                    </div>
+                    <div className="col-sm-12 col-lg-3 bg-info"><p>Details</p></div>
+                </div>
+            </div>
         </div>
     );
 };
