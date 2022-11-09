@@ -5,18 +5,18 @@ import './Main.css'
 
 const Main = () => {
 
-    const handleClick = (time) => {
-        console.log('clicked', time)
-    }
-
     const [activities, setActivity] = useState([])
-
+    const [cart, setCart] = useState([]);
     useEffect(() => {
         fetch('activity.json')
             .then(res => res.json())
             .then(data => setActivity(data))
     }, [])
-
+    const handleClick = (time) => {
+        console.log('clicked', time)
+        const newCart = [...cart, time]
+        setCart(newCart)
+    }
     return (
         <div>
 
@@ -58,7 +58,10 @@ const Main = () => {
                             }
                         </div>
                     </div>
-                    <div className="col-sm-12 col-lg-3 bg-info"><p>Details</p></div>
+                    <div className="col-sm-12 col-lg-3 bg-info">
+                        <p>Details</p>
+                        <p>cart {cart.length}</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,8 +1,9 @@
 import React from 'react';
 import './Activity.css'
 
-const Activity = (props) => {
-    const { name, description, time, img } = props.activity
+const Activity = ({ handleClick, activity }) => {
+
+    const { name, description, time, img } = activity
 
     return (
         <div className='activity'>
@@ -12,7 +13,7 @@ const Activity = (props) => {
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text">{description}</p>
                     <p>Required time: {time}min</p>
-                    <button onClick={() => props.handleClick(time)} className="btn btn-primary card-btn">Add to list</button>
+                    <button onClick={() => handleClick(time)} className="btn btn-primary card-btn">Add to list</button>
                 </div>
             </div>
         </div >
