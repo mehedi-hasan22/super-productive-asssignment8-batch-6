@@ -5,6 +5,10 @@ import './Main.css'
 
 const Main = () => {
 
+    const handleClick = (time) => {
+        console.log('clicked', time)
+    }
+
     const [activities, setActivity] = useState([])
 
     useEffect(() => {
@@ -49,6 +53,7 @@ const Main = () => {
                                 activities.map(activity => <Activity
                                     key={activity.id}
                                     activity={activity}
+                                    handleClick={handleClick}
                                 ></Activity>)
                             }
                         </div>

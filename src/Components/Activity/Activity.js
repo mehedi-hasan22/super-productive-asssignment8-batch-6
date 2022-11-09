@@ -3,6 +3,7 @@ import './Activity.css'
 
 const Activity = (props) => {
     const { name, description, time, img } = props.activity
+
     return (
         <div className='activity'>
             <div className="card mt-3" style={{ width: "18rem", minHeight: "20rem" }}>
@@ -11,7 +12,7 @@ const Activity = (props) => {
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text">{description}</p>
                     <p>Required time: {time}min</p>
-                    <a href="/#" className="btn btn-primary card-btn">Add to list</a>
+                    <button onClick={() => props.handleClick(time)} className="btn btn-primary card-btn">Add to list</button>
                 </div>
             </div>
         </div >
