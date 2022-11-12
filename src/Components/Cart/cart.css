@@ -1,0 +1,36 @@
+.cart {
+    position: sticky;
+    top: 0;
+    padding-top: 100px;
+    background-color: #cccccc;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.break {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+
+.break-button:visited {
+    background-color: bisque;
+}
+
+
+@media (max-width:425px) {
+    .cart {
+        position: absolute;
+        top: 150px;
+        background-color: aqua;
+        width: 78%;
+        border-radius: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: center;
+    }
+}
