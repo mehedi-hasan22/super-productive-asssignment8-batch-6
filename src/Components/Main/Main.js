@@ -28,7 +28,7 @@ const Main = () => {
 
 
             <div className="mx-5 mt-5">
-                <div className="row">
+                <div className="row main-flex">
                     <div className="activities col-sm-12 col-lg-9 bg-light rounded-3 ms-auto">
                         <div className="activity-container">
                             {

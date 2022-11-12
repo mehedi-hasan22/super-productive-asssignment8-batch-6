@@ -2,7 +2,7 @@
     position: sticky;
     top: 0;
     padding-top: 100px;
-    background-color: #cccccc;
+    background-color: #ebf0f7;
     height: 100%;
     border-radius: 10px;
 }
@@ -13,20 +13,31 @@
 }
 
 
-.break-button:visited {
-    background-color: bisque;
+
+.user-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.user-icon img {
+    width: 60px;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
 
 @media (max-width:425px) {
     .cart {
-        position: absolute;
-        top: 150px;
         background-color: aqua;
-        width: 78%;
+        width: 90%;
         border-radius: 10px;
         padding-top: 20px;
         padding-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .button-group {

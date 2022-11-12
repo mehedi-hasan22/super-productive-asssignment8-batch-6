@@ -1,6 +1,10 @@
 @media (max-width:425px) {
     .activities {
-        margin-top: 220px;
+        margin-top: 50px;
     }
 
+    .main-flex {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
