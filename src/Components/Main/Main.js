@@ -15,6 +15,13 @@ const Main = () => {
             .then(res => res.json())
             .then(data => setActivity(data))
     }, [])
+
+    // useEffect(()=>{
+
+    // },[])
+
+
+
     const handleClick = (time) => {
         // console.log('clicked', time)
         const newCart = [...cart, time]

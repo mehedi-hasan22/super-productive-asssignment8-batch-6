@@ -30,9 +30,9 @@
     margin-top: 20px;
 }
 
+
 @media (max-width:425px) {
     .cart {
-        background-color: aqua;
         width: 90%;
         border-radius: 10px;
         padding-top: 20px;

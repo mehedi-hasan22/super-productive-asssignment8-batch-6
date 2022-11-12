@@ -1,13 +1,32 @@
 import React from 'react';
 import './cart.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Cart = ({ cart }) => {
 
     const addBreak = (breakTime) => {
-        document.getElementById('break-time').innerText = breakTime;
+        localStorage.setItem('break-time', JSON.stringify(breakTime))
+
+        const storedCart = localStorage.getItem('break-time');
+
+        console.log(storedCart)
+
+        let breakField = document.getElementById('break-timeField');
+        breakField.innerText = storedCart
     }
 
-    console.log(cart)
+    const notify = () => toast.success('Activity Completed successfully!!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+    });;
 
     let total = 0;
     for (const time of cart) {
@@ -55,10 +74,14 @@ const Cart = ({ cart }) => {
             <div className='Exercise'>
                 <h5 className='ms-2'>Exercise Details:</h5>
                 <div className='bg-light m-2 p-2 container rounded text-center'>
-                    <h5>Break time : <span id='break-time' >0</span> min</h5>
+                    <h5>Break time : <span id='break-timeField' ></span> min</h5>
                 </div>
                 <div className='bg-light m-2 p-2 container rounded text-center'>
                     <h5>Exercise Time : {total} min</h5>
+                </div>
+                <div>
+                    <button className='toast-button btn btn-primary m-auto w-100 mt-3' onClick={notify}>Activity Compleated</button>
+                    <ToastContainer />
                 </div>
             </div>
         </div >
