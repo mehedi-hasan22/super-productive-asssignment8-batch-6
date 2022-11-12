@@ -4,7 +4,7 @@ import './cart.css'
 const Cart = ({ cart }) => {
 
     const addBreak = (breakTime) => {
-        console.log('break clicked', breakTime)
+        document.getElementById('break-time').innerText = breakTime;
     }
 
     console.log(cart)
@@ -55,7 +55,7 @@ const Cart = ({ cart }) => {
             <div className='Exercise'>
                 <h5 className='ms-2'>Exercise Details:</h5>
                 <div className='bg-light m-2 p-2 container rounded text-center'>
-                    <h5>Break time : {0} min</h5>
+                    <h5>Break time : <span id='break-time' >0</span> min</h5>
                 </div>
                 <div className='bg-light m-2 p-2 container rounded text-center'>
                     <h5>Exercise Time : {total} min</h5>
