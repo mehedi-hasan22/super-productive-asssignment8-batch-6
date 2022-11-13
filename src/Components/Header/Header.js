@@ -17,13 +17,7 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav fs-5 ms-auto mb-2 mb-lg-0 text-white">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/#">History</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/#">Challenge</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link active" href="/#">Login</a>
+                                <a className="nav-link active" href="QNA.html">Question & Answer</a>
                             </li>
                         </ul>
                     </div>
